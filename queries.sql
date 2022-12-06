@@ -76,3 +76,7 @@ SELECT COUNT(*) FROM animals;
 -- [X] How many animals have never tried to escape?
 SELECT COUNT(*) AS "Animals count that never escaped" FROM animals
 WHERE escape_attempts = 0;
+
+-- [X] What is the average weight of animals?
+SELECT CAST(AVG(weight_kg) AS DECIMAL(10,2)) AS "Animals AVG Weight" FROM animals;
+
