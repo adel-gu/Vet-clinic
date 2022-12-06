@@ -85,7 +85,7 @@ SELECT neutered, MAX(escape_attempts) AS "MAX escape attempts" FROM animals
 GROUP BY neutered;
 
 -- [X] What is the minimum and maximum weight of each type of animal?
-SELECT species, MIN(weight_kg) AS "MIN weight" FROM animals
+SELECT species, MIN(weight_kg) AS "MIN weight", MAX(weight_kg) AS "MAX weight" FROM animals
 GROUP BY species;
 
 -- [X] What is the average number of escape attempts per animal type of those born between 1990 and 2000?
