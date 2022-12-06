@@ -17,19 +17,13 @@ ALTER TABLE animals
 CREATE TABLE owners(
     id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
     full_name VARCHAR(150),
-    age INT
+    age INT,
+    PRIMARY KEY (id)
 );
 
--- [X] Create a table named species with the following columns:
+-- [X] Create a table named species:
 CREATE TABLE species(
     id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
-    name VARCHAR(100)
+    name VARCHAR(100),
+    PRIMARY KEY (id)
 );
-
--- Modify animals table:
--- [X] Make sure that id is set as autoincremented PRIMARY KEY
--- [X] Remove column species
-ALTER TABLE animals
-    DROP COLUMN species;
--- [] Add column species_id which is a foreign key referencing species table
--- [] Add column owner_id which is a foreign key referencing the owners table
