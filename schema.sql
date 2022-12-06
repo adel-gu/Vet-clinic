@@ -32,3 +32,7 @@ CREATE TABLE species(
 -- [X] Make sure that id is set as autoincremented PRIMARY KEY
 ALTER TABLE animals
     ADD PRIMARY KEY (id);
+
+-- [X] Remove column species
+ALTER TABLE animals
+    DROP COLUMN species;
