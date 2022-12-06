@@ -66,3 +66,10 @@ VALUES ('Pokemon');
 -- [X] Digimon
 INSERT INTO species (name)
 VALUES ('Digimon');
+
+-- Modify your inserted animals so it includes the species_id value:
+-- [X] If the name ends in "mon" it will be Digimon
+UPDATE animals
+SET species_id = 2
+WHERE name LIKE '%mon%';
+-- All other animals are Pokemon
