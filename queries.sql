@@ -69,3 +69,6 @@ BEGIN;
   WHERE weight_kg < 0;
 -- [X] Commit transaction
 COMMIT;
+
+-- [X] How many animals are there?
+SELECT COUNT(*) FROM animals;
