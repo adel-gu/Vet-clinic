@@ -36,3 +36,9 @@ ALTER TABLE animals
 -- [X] Remove column species
 ALTER TABLE animals
     DROP COLUMN species;
+
+-- [X] add both species_id and owner_id to the animals.
+ALTER TABLE animals
+    ADD COLUMN species_id INT,
+    ADD COLUMN owner_id INT,
+
