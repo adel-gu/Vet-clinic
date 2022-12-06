@@ -19,3 +19,9 @@ CREATE TABLE owners(
     full_name VARCHAR(150),
     age INT
 );
+
+-- [X] Create a table named species with the following columns:
+CREATE TABLE species(
+    id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(100)
+);
