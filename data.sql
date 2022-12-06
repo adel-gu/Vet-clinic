@@ -72,4 +72,8 @@ VALUES ('Digimon');
 UPDATE animals
 SET species_id = 2
 WHERE name LIKE '%mon%';
--- All other animals are Pokemon
+
+-- [X] All other animals are Pokemon
+UPDATE animals
+SET species_id = 1
+WHERE species_id IS NULL;
