@@ -57,3 +57,12 @@ VALUES ('Dean Winchester', 14);
 -- [X] Jodie Whittaker 38 years old.
 INSERT INTO owners (full_name, age)
 VALUES ('Jodie Whittaker', 38);
+
+-- Insert the following data into the species table:
+-- [X] Pokemon
+INSERT INTO species (name)
+VALUES ('Pokemon');
+
+-- [X] Digimon
+INSERT INTO species (name)
+VALUES ('Digimon');
