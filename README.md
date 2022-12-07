@@ -1,48 +1,121 @@
-# curriculum-databases-projects-template
+<a name="readme-top"></a>
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
 
+Modify this file to match your project and remove sections that don't apply.
 
-## Getting Started
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
 
-This repository includes files with plain SQL that can be used to recreate a database:
+After you're finished please remove all the comments and instructions!
+-->
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
+<div align="center">
 
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-## Authors
+  <h3><b>Microverse README Template</b></h3>
 
-👤 **Author1**
+</div>
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+<!-- TABLE OF CONTENTS -->
 
-👤 **Author2**
+# 📗 Table of Contents
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [📝 License](#license)
 
-## 🤝 Contributing
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Vet clinic database <a name="about-project"></a>
+This repo is about using relational database to create the data structure for a vet clinic, the DATA BASE contains data about:
+- animals
+- animals' owners
+- clinic employees
+- visits
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+- Postgres installed in your machine.
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+     cd my-folder
+     git clone git@github.com:adel-gu/Vet-clinic.git
+```
+
+<!-- AUTHORS -->
+
+## 👥 Author <a name="authors"></a>
+
+👤 **Adel Guitoun**
+- GitHub: [@adel-gu](https://github.com/adel-gu)
+- Twitter: [@GuitounAdel](https://twitter.com/@GuitounAdel)
+- LinkedIn: [adelguitoun](https://linkedin.com/in/adelguitoun)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
+If you like this project give it a star 🤩.
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📝 License
+<!-- LICENSE -->
 
-This project is [MIT](./MIT.md) licensed.
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
