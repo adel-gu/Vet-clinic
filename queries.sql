@@ -101,8 +101,19 @@ SELECT name AS "Animal Name", full_name AS "Owner"
   ON animals.owner_id = owners.id
   WHERE owners.full_name = 'Melody Pond';
 
--- [] List of all animals that are pokemon (their type is Pokemon).
--- [] List all owners and their animals, remember to include those that don't own any animal.
+-- [X] List of all animals that are pokemon (their type is Pokemon).
+SELECT animals.name AS "Animal Name", species.name AS "Species"
+  FROM animals
+  INNER JOIN species
+  ON animals.species_id = species.id
+  WHERE species.name = 'Pokemon';
+
+-- [X] List all owners and their animals, remember to include those that don't own any animal.
+SELECT owners.full_name AS "Owner", animals.name AS "Animal Name"
+  FROM owners
+  LEFT JOIN animals
+  ON owners.id = animals.owner_id;
+
 -- [] How many animals are there per species?
 -- [] List all Digimon owned by Jennifer Orwell.
 -- [] List all animals owned by Dean Winchester that haven't tried to escape.
