@@ -85,6 +85,9 @@ UPDATE animals
   WHERE name = 'Agumon';
 
 -- [X] Jennifer Orwell owns Gabumon and Pikachu.
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Jennifer Orwell')
+  WHERE name IN ('Gabumon', 'Pikachu');
 
 -- [X] Bob owns Devimon and Plantmon.
 
