@@ -92,3 +92,18 @@ GROUP BY species;
 SELECT species, CAST(AVG(escape_attempts) AS DECIMAL(10)) AS "AVG of escaping" FROM animals
 WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
 GROUP BY species;
+
+-- Write queries (using JOIN) to answer the following questions:
+-- [X] What animals belong to Melody Pond?
+SELECT name AS "Animal Name", full_name AS "Owner"
+  FROM animals
+  INNER JOIN owners
+  ON animals.owner_id = owners.id
+  WHERE owners.full_name = 'Melody Pond';
+
+-- [] List of all animals that are pokemon (their type is Pokemon).
+-- [] List all owners and their animals, remember to include those that don't own any animal.
+-- [] How many animals are there per species?
+-- [] List all Digimon owned by Jennifer Orwell.
+-- [] List all animals owned by Dean Winchester that haven't tried to escape.
+-- [] Who owns the most animals?
