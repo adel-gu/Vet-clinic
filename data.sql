@@ -150,51 +150,162 @@ INSERT INTO specializations (vet_id, species_id)
   );
 
 -- Insert the following data for visits:
--- [] Agumon visited William Tatcher on May 24th, 2020.
--- [] Agumon visited Stephanie Mendez on Jul 22th, 2020.
+-- [X] Agumon visited William Tatcher on May 24th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'William Tatcher'),
+  (SELECT id FROM animals WHERE name = 'Agumon'),
+  'May 24, 2020'
+);
 
--- [] Gabumon visited Jack Harkness on Feb 2nd, 2021.
+-- [X] Agumon visited Stephanie Mendez on Jul 22th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Stephanie Mendez'),
+  (SELECT id FROM animals WHERE name = 'Agumon'),
+  'Jul 22, 2020'
+);
 
--- [] Pikachu visited Maisy Smith on Jan 5th, 2020.
+-- [X] Gabumon visited Jack Harkness on Feb 2nd, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Jack Harkness'),
+  (SELECT id FROM animals WHERE name = 'Gabumon'),
+  'Feb 02, 2021'
+);
 
--- [] Pikachu visited Maisy Smith on Mar 8th, 2020.
+-- [X] Pikachu visited Maisy Smith on Jan 5th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Pikachu'),
+  'Jan 05, 2020'
+);
 
--- [] Pikachu visited Maisy Smith on May 14th, 2020.
+-- [X] Pikachu visited Maisy Smith on Mar 8th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Pikachu'),
+  'Mar 08, 2020'
+);
 
--- [] Devimon visited Stephanie Mendez on May 4th, 2021.
+-- [X] Pikachu visited Maisy Smith on May 14th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Pikachu'),
+  'May 14, 2020'
+);
 
--- [] Charmander visited Jack Harkness on Feb 24th, 2021.
+-- [X] Devimon visited Stephanie Mendez on May 4th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Stephanie Mendez'),
+  (SELECT id FROM animals WHERE name = 'Devimon'),
+  'May 04, 2021'
+);
 
--- [] Plantmon visited Maisy Smith on Dec 21st, 2019.
+-- [X] Charmander visited Jack Harkness on Feb 24th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Jack Harkness'),
+  (SELECT id FROM animals WHERE name = 'Charmander'),
+  'Feb 24, 2021'
+);
 
--- [] Plantmon visited William Tatcher on Aug 10th, 2020.
+-- [X] Plantmon visited Maisy Smith on Dec 21st, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Plantmon'),
+  'Dec 21, 2019'
+);
 
--- [] Plantmon visited Maisy Smith on Apr 7th, 2021.
+-- [X] Plantmon visited William Tatcher on Aug 10th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'William Tatcher'),
+  (SELECT id FROM animals WHERE name = 'Plantmon'),
+  'Aug 10, 2020'
+);
 
--- [] Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+-- [X] Plantmon visited Maisy Smith on Apr 7th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Plantmon'),
+  'Apr 07, 2021'
+);
 
--- [] Angemon visited Jack Harkness on Oct 3rd, 2020.
+-- [X] Squirtle visited Stephanie Mendez on Sep 29th, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Stephanie Mendez'),
+  (SELECT id FROM animals WHERE name = 'Squirtle'),
+  'Sep 29, 2019'
+);
 
--- [] Angemon visited Jack Harkness on Nov 4th, 2020.
+-- [X] Angemon visited Jack Harkness on Oct 3rd, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Jack Harkness'),
+  (SELECT id FROM animals WHERE name = 'Angemon'),
+  'Oct 03, 2020'
+);
 
--- [] Boarmon visited Maisy Smith on Jan 24th, 2019.
+-- [X] Angemon visited Jack Harkness on Nov 4th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Jack Harkness'),
+  (SELECT id FROM animals WHERE name = 'Angemon'),
+  'Nov 04, 2020'
+);
 
--- [] Boarmon visited Maisy Smith on May 15th, 2019.
+-- [X] Boarmon visited Maisy Smith on Jan 24th, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Boarmon'),
+  'Jan 24, 2019'
+);
 
--- [] Boarmon visited Maisy Smith on Feb 27th, 2020.
+-- [X] Boarmon visited Maisy Smith on May 15th, 2019.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Boarmon'),
+  'May 15, 2019'
+);
 
--- [] Boarmon visited Maisy Smith on Aug 3rd, 2020.
+-- [X] Boarmon visited Maisy Smith on Feb 27th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Boarmon'),
+  'Feb 27, 2020'
+);
 
--- [] Blossom visited Stephanie Mendez on May 24th, 2020.
+-- [X] Boarmon visited Maisy Smith on Aug 3rd, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Maisy Smith'),
+  (SELECT id FROM animals WHERE name = 'Boarmon'),
+  'Aug 03, 2020'
+);
 
--- [] Blossom visited William Tatcher on Jan 11th, 2021.
+-- [X] Blossom visited Stephanie Mendez on May 24th, 2020.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'Stephanie Mendez'),
+  (SELECT id FROM animals WHERE name = 'Blossom'),
+  'May 24, 2020'
+);
 
-
-
-INSERT INTO specializations (vet_id, species_id)
-  VALUES(
-    ((SELECT id FROM vets WHERE name = 'Stephanie Mendez'),
-    (SELECT id FROM species WHERE name = 'Pokemon')),
-    ((SELECT id FROM vets WHERE name = 'Stephanie Mendez'),
-    (SELECT id FROM species WHERE name = 'Digimon'))
-  );
+-- [X] Blossom visited William Tatcher on Jan 11th, 2021.
+INSERT INTO visits (vet_id, animal_id, date_of_visit)
+VALUES(
+  (SELECT id FROM vets WHERE name = 'William Tatcher'),
+  (SELECT id FROM animals WHERE name = 'Blossom'),
+  'Jan 11, 2021'
+);
