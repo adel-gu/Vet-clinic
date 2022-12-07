@@ -95,5 +95,8 @@ UPDATE animals
   WHERE name IN ('Devimon', 'Plantmon');
 
 -- [X] Melody Pond owns Charmander, Squirtle, and Blossom.
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
+  WHERE name IN ('Charmander', 'Squirtle', 'Blossom');
 
 -- [X] Dean Winchester owns Angemon and Boarmon.
