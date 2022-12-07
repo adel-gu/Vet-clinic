@@ -121,6 +121,14 @@ SELECT COUNT(animals.name) AS "Animals Count", species.name AS "Species"
   ON animals.species_id = species.id
   GROUP BY species.name;
 
--- [] List all Digimon owned by Jennifer Orwell.
+-- [X] List all Digimon owned by Jennifer Orwell.
+SELECT owners.full_name AS "Owner", animals.name As "Animal", species.name AS "Species"
+  FROM owners
+  INNER JOIN animals
+  ON owners.id = animals.owner_id
+  INNER JOIN species
+  ON species.id = animals.species_id
+  WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
+
 -- [] List all animals owned by Dean Winchester that haven't tried to escape.
 -- [] Who owns the most animals?
