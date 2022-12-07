@@ -77,3 +77,17 @@ WHERE name LIKE '%mon%';
 UPDATE animals
 SET species_id = 1
 WHERE species_id IS NULL;
+
+-- Modify your inserted animals to include owner information (owner_id):
+-- [X] Sam Smith owns Agumon.
+UPDATE animals
+  SET owner_id = (SELECT id from owners WHERE full_name = 'Sam Smith')
+  WHERE name = 'Agumon';
+
+-- [X] Jennifer Orwell owns Gabumon and Pikachu.
+
+-- [X] Bob owns Devimon and Plantmon.
+
+-- [X] Melody Pond owns Charmander, Squirtle, and Blossom.
+
+-- [X] Dean Winchester owns Angemon and Boarmon.
