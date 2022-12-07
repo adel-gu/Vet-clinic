@@ -130,5 +130,11 @@ SELECT owners.full_name AS "Owner", animals.name As "Animal", species.name AS "S
   ON species.id = animals.species_id
   WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
 
--- [] List all animals owned by Dean Winchester that haven't tried to escape.
+-- [X] List all animals owned by Dean Winchester that haven't tried to escape.
+SELECT owners.full_name AS "Owner", animals.name As "Animal" , animals.escape_attempts
+  FROM owners
+  INNER JOIN animals
+  ON owners.id = animals.owner_id
+  WHERE owners.full_name = 'Dean Winchester' AND animals.escape_attempts = 0;
+
 -- [] Who owns the most animals?
