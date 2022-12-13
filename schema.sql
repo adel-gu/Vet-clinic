@@ -90,6 +90,9 @@ CREATE TABLE visits(
             REFERENCES animals(id)
 );
 
+-- [X] Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
 -- [X] Drop visits table
 DROP TABLE visits;
 
