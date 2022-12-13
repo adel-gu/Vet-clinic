@@ -237,3 +237,6 @@ SELECT species.name AS "species", COUNT(animals.species_id)
   WHERE vets.name = 'Maisy Smith'
   GROUP BY species.name
   ORDER BY count DESC LIMIT 1;
+
+-- [X] decrease the execution time of the first query
+CREATE INDEX visits_animal_id ON visits(animal_id);
