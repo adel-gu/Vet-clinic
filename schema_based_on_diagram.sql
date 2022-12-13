@@ -7,7 +7,16 @@ CREATE TABLE patients(
 );
 
 -- 2) [] Create medical_histories table.
-
+CREATE TABLE medical_histories(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+  admitted_at TIMESTAMP,
+  patient_id INT,
+  status VARCHAR(150),
+  PRIMARY KEY (id),
+  CONSTRAINT fk_patients
+    FOREIGN KEY (patient_id)
+      REFERENCES patients(id)
+);
 
 -- 3) [] Create invoices table.
 
