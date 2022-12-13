@@ -6,7 +6,7 @@ CREATE TABLE patients(
   PRIMARY KEY (id)
 );
 
--- 2) [] Create medical_histories table.
+-- 2) [X] Create medical_histories table.
 CREATE TABLE medical_histories(
   id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
   admitted_at TIMESTAMP,
@@ -18,8 +18,18 @@ CREATE TABLE medical_histories(
       REFERENCES patients(id)
 );
 
--- 3) [] Create invoices table.
-
+-- 3) [X] Create invoices table.
+CREATE TABLE invoices(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+  total_amount DECIMAL,
+  generated_at TIMESTAMP,
+  payed_at TIMESTAMP,
+  medical_history_id INT,
+  PRIMARY KEY (id),
+  CONSTRAINT fk_medical_histories
+    FOREIGN KEY (medical_history_id)
+      REFERENCES medical_histories(id)
+);
 
 -- 4) [] Create treatments table.
 
