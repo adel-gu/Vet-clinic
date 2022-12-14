@@ -38,3 +38,24 @@ CREATE TABLE treatments(
   name VARCHAR(100),
   PRIMARY KEY (id)
 );
+
+
+-- 5) [X] Create invoices_items table.
+CREATE TABLE invoices_items(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+  unit_price DECIMAL,
+  quantity INT,
+  total_price DECIMAL,
+  invoiced_id INT,
+  treatment_id INT,
+  PRIMARY KEY (id),
+  CONSTRAINT fk_invoices
+    FOREIGN KEY (invoiced_id)
+      REFERENCES invoices(id),
+  CONSTRAINT fk_treatments
+    FOREIGN KEY (treatment_id)
+      REFERENCES treatments(id)
+);
+
+
+
