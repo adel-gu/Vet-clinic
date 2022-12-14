@@ -239,4 +239,13 @@ SELECT species.name AS "species", COUNT(animals.species_id)
   ORDER BY count DESC LIMIT 1;
 
 -- [X] decrease the execution time of the first query
+SELECT COUNT(*) FROM visits where animal_id = 4;
 CREATE INDEX visits_animal_id ON visits(animal_id);
+
+-- [X] decrease the execution time
+SELECT * FROM visits where vet_id = 2;
+CREATE INDEX visits_vet_id ON visits(vet_id);
+
+-- [X] decrease the execution time
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+CREATE INDEX owners_email ON owners(email);
