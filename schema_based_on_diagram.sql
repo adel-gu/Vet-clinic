@@ -31,11 +31,10 @@ CREATE TABLE invoices(
       REFERENCES medical_histories(id)
 );
 
--- 4) [] Create treatments table.
-
-
--- 5) [] Create invoices_items table.
-
-
--- 6) [] Create (join-table between medical_histories and treatments) medical_treatments table.
-
+-- 4) [X] Create treatments table.
+CREATE TABLE treatments(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+  type VARCHAR(50),
+  name VARCHAR(100),
+  PRIMARY KEY (id)
+);
