@@ -57,5 +57,19 @@ CREATE TABLE invoices_items(
       REFERENCES treatments(id)
 );
 
+-- 6) [X] Create (join-table between medical_histories and treatments) medical_treatments table.
+CREATE TABLE medicals_treatments(
+  id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
+  treatment_id INT,
+  medical_history_id INT,
+  PRIMARY KEY (id),
+  CONSTRAINT fk_treatments
+    FOREIGN KEY (treatment_id)
+      REFERENCES treatments(id),
+  CONSTRAINT fk_medical_histories
+    FOREIGN KEY (medical_history_id)
+      REFERENCES medical_histories(id)
+);
+
 
 
