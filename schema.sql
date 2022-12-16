@@ -90,3 +90,18 @@ CREATE TABLE visits(
             REFERENCES animals(id)
 );
 
+-- [X] Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+-- [X] Drop visits table
+DROP TABLE visits;
+
+-- [X] Create visits table
+CREATE TABLE visits(
+  id INT GENERATED ALWAYS AS IDENTITY,
+  animal_id INT REFERENCES animals(id),
+  vet_id INT REFERENCES vets(id),
+  date_of_visit DATE,
+  PRIMARY KEY(id)
+);
+
