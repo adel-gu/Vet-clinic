@@ -81,8 +81,18 @@ WHERE escape_attempts = 0;
 SELECT CAST(AVG(weight_kg) AS DECIMAL(10,2)) AS "Animals AVG Weight" FROM animals;
 
 -- [X] Who escapes the most, neutered or not neutered animals?
-SELECT neutered, MAX(escape_attempts) AS "MAX escape attempts" FROM animals
-GROUP BY neutered;
+WITH sub AS (
+  SELECT neutered, AVG(escape_attempts) AS "avg escape attempts"
+  FROM animals
+  GROUP BY neutered
+)
+
+SELECT sub.neutered, sub."avg escape attempts"
+FROM sub
+WHERE sub."avg escape attempts" = (
+  SELECT MAX(sub."avg escape attempts")
+  FROM sub
+);
 
 -- [X] What is the minimum and maximum weight of each type of animal?
 SELECT species, MIN(weight_kg) AS "MIN weight", MAX(weight_kg) AS "MAX weight" FROM animals
